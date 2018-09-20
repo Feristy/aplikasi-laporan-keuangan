@@ -1,1 +1,6 @@
-# aplikasi-laporan-keuangan-codeigniter
+# aplikasi-laporan-keuangan
+
+# login
+#username : usertest
+#password : 12345
+

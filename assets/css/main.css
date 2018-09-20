@@ -1,0 +1,231 @@
+.clear{clear:both;}
+.pointer{cursor:pointer;}
+.margin{margin:0;}
+.padding{padding:0;}
+.db{display:block;}
+.dib{display:inline-block;}
+.img{
+	max-width:100%;
+	max-height:100%;
+}
+.wauto{width:auto;}
+.in-number{width:200px;}
+
+.form-control, .mce-tinymce, .btn, .panel{
+    border-radius: 3px;
+}
+
+.mce-branding-powered-by{display:none;}
+
+.post-file{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.post-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    background: 0 0;
+    cursor: inherit;
+    display: block;
+}
+
+.contents{
+    padding: 65px 15px 50px 225px;
+    transition: 0.3s;
+}
+.content-in{padding-left:15px;}
+
+.top-bar{
+	position: fixed;
+    left:0;
+    right:0;
+    z-index: 10;
+    background-color: #337ab7;
+}
+
+.btn-burger{
+    float:left;
+    padding: 14.3px 15px;
+    margin: 0;
+    font-size: 1.5em;
+    color:#fff;
+    line-height: 20px;
+}
+.btn-burger:hover{
+	background-color: #000;
+}
+.navbar-brand, .navbar-brand:hover{color:#fff;}
+.top-bar{
+    position: fixed;
+    left:0;
+    right:0;
+    z-index: 10;
+    background-color: #5cb85c
+}
+.btn-burger{
+    float:left;
+    padding: 13.5px 15px;
+    font-size: 1.5em;
+    line-height:0;
+    color:#fff;
+}
+.btn-burger:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+.brands{
+    float:left;
+    padding: 11.5px 15px;
+    font-size: 1.3em;
+    color:#fff;
+}
+.admin-menu{
+    position: fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    width: 210px;
+    margin-top: 48px;
+    padding-top: 10px;
+    background-color: #333;
+    z-index: 9;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: 0.3s;
+}
+.admin-menu ul li a, .submenu li a{
+    display: block;
+    font-weight: normal;
+    padding:10px 0;
+    padding-left:5px;
+    text-decoration: none;
+    cursor:pointer;
+    color:#fff;
+}
+.admin-menu-first, .admin-menu-active{margin:1px 0;}
+.admin-menu-first:hover{
+    background-color:#5cb85c;
+}
+.admin-menu-active{
+    background-color:#5cb85c;
+}
+.admin-menu-first i, .admin-menu-active i{
+    font-size:1.1em;
+    margin:0 10px;
+}
+.side-in{left:-210px;}
+.submenu{
+    max-height:0;
+    overflow:hidden;
+    transition: max-height 0.3s ease-out;
+    list-style:none;
+    background-color:#555;
+}
+.submenu li{padding-left:4px;}
+.submenu li a:hover{
+    color:#5cb85c;
+}
+.contents{
+    padding: 65px 15px 50px 225px;
+    transition: 0.3s;
+}
+.content-in{padding-left:15px;}
+.table-filter{
+    display:inline-block;
+    width:auto;
+    font-weight: normal;
+}
+.dataTables_length{float:left}
+.dataTables_filter, .dataTables_paginate{float:right;}
+.paginate_button{margin:0 2px;}
+.btn-del{
+    float:left;
+    margin-right: 4px;
+}
+
+.shortcut a{color:#000;}
+.shortcut a:hover{color:#337ab7;}
+.shortcut .img-circle{
+    border: 1px solid #ddd;
+    padding: 8.5px 10px;
+    font-size: 2em;
+}
+.shortcut p{font-size: 1.1em}
+.tb-check{width:30px;}
+.tb-act{
+    width:100px;
+    text-align: center;
+}
+.close-modal{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0 !important;
+}
+.title-modal{font-weight:600;}
+.banners{
+    padding:30px 0px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2em;
+    border-radius: 3px;
+    margin-top: 15px;
+    color:#fff;
+    background-color: #5cb85c;
+}
+.highcharts-legend{display:none;}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 60px;
+}
+/*css login*/
+.alert, .btn, .form-control{border-radius: 3px;}
+
+.wrapper-login{
+    width: auto;
+    max-width: 300px;
+    margin:0 auto;
+    margin-top:150px;
+    text-align:center;
+}
+.login{
+    padding: 25px;
+    border-radius: 3px;
+}
+.login h2{
+    margin-bottom: 50px;
+    color:#000;
+}
+.login-check{
+    text-align:left;
+    padding-left: 10px;
+}
+.login-footer{
+    text-align: center;
+    color:#777;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding:15px 0;
+    background-color: #fff;
+}
+/*css login*/
