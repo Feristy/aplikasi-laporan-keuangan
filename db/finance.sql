@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Sep 2018 pada 08.44
+-- Waktu pembuatan: 18 Okt 2018 pada 06.04
 -- Versi server: 10.1.34-MariaDB
 -- Versi PHP: 7.2.7
 
@@ -41,7 +41,7 @@ CREATE TABLE `asset` (
 INSERT INTO `asset` (`id`, `name`, `total`) VALUES
 (1, 'Kas ditangan', '0'),
 (2, 'Kas dibank', '0'),
-(3, 'Peralatan', '0');
+(3, 'Peralatan', '100');
 
 -- --------------------------------------------------------
 
@@ -63,7 +63,7 @@ INSERT INTO `biaya` (`id`, `name`, `total`) VALUES
 (1, 'Biaya Listrik', '0'),
 (2, 'Biaya Telephone', '0'),
 (3, 'Biaya Internet', '0'),
-(4, 'Biaya Gaji', '0');
+(4, 'Biaya Gaji', '100');
 
 -- --------------------------------------------------------
 
@@ -83,7 +83,9 @@ CREATE TABLE `debit` (
 
 INSERT INTO `debit` (`id`, `debit`, `total`) VALUES
 (1, 'Penjualan', '100000'),
-(2, 'Modal', '2000000');
+(2, 'Modal', '2000000'),
+(3, 'Peralatan', '100'),
+(4, 'Biaya Gaji', '100');
 
 -- --------------------------------------------------------
 
@@ -104,7 +106,9 @@ CREATE TABLE `jurnal_umum` (
 
 INSERT INTO `jurnal_umum` (`id`, `name`, `id_debit`, `id_kredit`) VALUES
 (27, 'penjualan', 1, 0),
-(28, 'modal', 2, 0);
+(28, 'modal', 2, 0),
+(29, 'komputer', 3, 0),
+(30, 'gaji', 4, 0);
 
 -- --------------------------------------------------------
 
@@ -123,7 +127,7 @@ CREATE TABLE `kewajiban_modal` (
 --
 
 INSERT INTO `kewajiban_modal` (`id`, `name`, `total`) VALUES
-(1, 'Modal', '2100000'),
+(1, 'Modal', '2099900'),
 (2, 'Pinjaman', '0');
 
 -- --------------------------------------------------------
@@ -157,7 +161,7 @@ CREATE TABLE `modal` (
 INSERT INTO `modal` (`id`, `name`, `total`) VALUES
 (2, 'Investasi', '0'),
 (3, 'Penarikan Modal', '2000000'),
-(4, 'Laporan Pendapatan', '100000');
+(4, 'Laporan Pendapatan', '99900');
 
 -- --------------------------------------------------------
 
@@ -200,13 +204,13 @@ CREATE TABLE `post_akun` (
 INSERT INTO `post_akun` (`id`, `name`, `debit`, `kredit`, `saldo`) VALUES
 (1, 'Kas ditangan', '0', '0', '0'),
 (2, 'Kas dibank', '0', '0', '0'),
-(3, 'Peralatan', '0', '0', '0'),
+(3, 'Peralatan', '100', '0', '100'),
 (4, 'Penjualan', '100000', '0', '100000'),
 (5, 'Diskon Penjualan', '0', '0', '0'),
 (6, 'Biaya Listrik', '0', '0', '0'),
 (7, 'Biaya Telephone', '0', '0', '0'),
 (8, 'Biaya Internet', '0', '0', '0'),
-(9, 'Biaya Gaji', '0', '0', '0'),
+(9, 'Biaya Gaji', '100', '0', '100'),
 (10, 'Modal', '2000000', '0', '2000000'),
 (11, 'Pinjaman', '0', '0', '0');
 
@@ -234,7 +238,10 @@ INSERT INTO `traffic` (`id`, `date`, `name`, `val`) VALUES
 (4, '2018-09-13', 'Penjualan', '0'),
 (6, '2018-09-14', 'Penjualan', '0'),
 (7, '2018-09-17', 'Penjualan', '2000000'),
-(8, '2018-09-18', 'Penjualan', '100000');
+(8, '2018-09-18', 'Penjualan', '100000'),
+(9, '2018-09-27', 'Penjualan', '100000'),
+(10, '2018-10-16', 'Penjualan', '100000'),
+(11, '2018-10-18', 'Penjualan', '100000');
 
 -- --------------------------------------------------------
 
@@ -345,13 +352,13 @@ ALTER TABLE `biaya`
 -- AUTO_INCREMENT untuk tabel `debit`
 --
 ALTER TABLE `debit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `jurnal_umum`
 --
 ALTER TABLE `jurnal_umum`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT untuk tabel `kewajiban_modal`
@@ -387,7 +394,7 @@ ALTER TABLE `post_akun`
 -- AUTO_INCREMENT untuk tabel `traffic`
 --
 ALTER TABLE `traffic`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`

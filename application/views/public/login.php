@@ -7,7 +7,7 @@
     	<title>Login - Aplikasi Laporan Keuangan</title>
     	<link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css">
     	<link rel="stylesheet" href="assets/css/fontawesome/css/all.css">
-		<link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="assets/css/login.css">
 	</head>
 	<body>
 		<form method="post" class="wrapper-login">

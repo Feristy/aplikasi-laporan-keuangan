@@ -73,23 +73,6 @@ class Alk_jurnal_umum extends CI_Controller {
 			$this->general->total();
 		}
 
-		if($this->input->post('add')){
-			$id_jurnal_umum = $this->general->last_id('jurnal_umum', 'id');
-			$history_jurnal_umum = $this->general->read('jurnal_umum', array('id' => $id_jurnal_umum));
-			$history_debit = $this->general->read('debit', array('id' => $history_jurnal_umum['id_debit']));
-			$history_debit = !empty($history_debit) ? $history_debit['debit'].', Rp.'.number_format($history_debit['total']): '';
-			$history_kredit = $this->general->read('kredit', array('id' => $history_jurnal_umum['id_kredit']));
-			$history_kredit = !empty($history_kredit) ? $history_kredit['kredit'].', Rp.'.number_format($history_kredit['total']): '';
-			$history_date = date('Y-m-d', time());
-			$this->db->insert('history', array(
-					'id_jurnal_umum' => $id_jurnal_umum,
-					'jurnal_umum' => $history_jurnal_umum['name'],
-					'debit' => $history_debit,
-					'kredit' => $history_kredit,
-					'date' => $history_date
-				));
-		}
-
 		if($this->input->post('del')){
 			$this->general->delete($this->input->post('del'));
 		}
