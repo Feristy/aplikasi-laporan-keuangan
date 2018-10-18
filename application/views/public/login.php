@@ -27,6 +27,9 @@
 				</div>
 				<input type="hidden" name="<?=$csrf['name']?>" value="<?=$csrf['hash']?>">
 				<button class="btn btn-success btn-block" type="submit" name="submit" value="1">Sign in</button>
+				<br>
+				<p>username : usertest</p>
+				<p>password : 12345</p>
 			</div>
 		</form>
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
