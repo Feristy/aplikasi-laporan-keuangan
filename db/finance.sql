@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Okt 2018 pada 06.04
+-- Waktu pembuatan: 08 Nov 2018 pada 05.43
 -- Versi server: 10.1.34-MariaDB
 -- Versi PHP: 7.2.7
 
@@ -227,21 +227,18 @@ CREATE TABLE `traffic` (
   `val` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data untuk tabel `traffic`
+-- Struktur dari tabel `traffic_history`
 --
 
-INSERT INTO `traffic` (`id`, `date`, `name`, `val`) VALUES
-(1, '2018-08-28', 'Penjualan', '0'),
-(2, '2018-08-31', 'Penjualan', '0'),
-(3, '2018-09-12', 'Penjualan', '0'),
-(4, '2018-09-13', 'Penjualan', '0'),
-(6, '2018-09-14', 'Penjualan', '0'),
-(7, '2018-09-17', 'Penjualan', '2000000'),
-(8, '2018-09-18', 'Penjualan', '100000'),
-(9, '2018-09-27', 'Penjualan', '100000'),
-(10, '2018-10-16', 'Penjualan', '100000'),
-(11, '2018-10-18', 'Penjualan', '100000');
+CREATE TABLE `traffic_history` (
+  `id` int(11) NOT NULL,
+  `name` varchar(225) NOT NULL,
+  `val` int(11) NOT NULL,
+  `time` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -327,6 +324,12 @@ ALTER TABLE `traffic`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `traffic_history`
+--
+ALTER TABLE `traffic_history`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
@@ -394,7 +397,13 @@ ALTER TABLE `post_akun`
 -- AUTO_INCREMENT untuk tabel `traffic`
 --
 ALTER TABLE `traffic`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT untuk tabel `traffic_history`
+--
+ALTER TABLE `traffic_history`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
